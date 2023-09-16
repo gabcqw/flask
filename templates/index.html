@@ -1,0 +1,51 @@
+{%extends "base.html"  %}
+
+<hr>
+{% block title %}www.hqhair.com/index{% endblock %}
+
+{% block content %}
+<h3 align="center" class="blue_text paletur_bg box01"> HQhair Warehouse Management System- Inventory </h3></p>
+     <hr>
+    </table>
+    <hr>
+    <table border="2" align="center" class="blue_text paletur_bg" >
+      <thead>
+        <tr>
+            <th>Account</th>
+      </tr>
+      <tbody align="center">    
+        </tr>
+        <td> {{ transactions }} </td>
+        </tr>
+        
+        <tbody align="center">
+    </table>
+    
+<hr>
+<table border="2" align="center" class="blue_text paletur_bg" >
+    <thead>
+    <tr>
+        <th>Inventory Level Table -Product Name </th>
+        <th>Size /ML </th>
+        <th>Quantity </th>
+        <th>Unit Price/€ </th>
+    </tr>
+    </thead>
+    <tbody align="center">    
+            {%  for stock, inventory in stocks.items() %}
+            </tr>
+            <td>{{ stock }} </td>
+            <td> {{ inventory["Size"] }} </td>
+            <td>{{ inventory["Quantity"] }} </td>
+            <td>{{ inventory["Unit_Price"] }} </td>
+        </tr>
+        {% endfor %}
+        
+        <tbody align="center">
+    </table>
+
+        </tr>
+        
+        </tr>
+            
+{% endblock %}
